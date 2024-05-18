@@ -1,0 +1,33 @@
+Imports System
+
+Module Program
+    Sub Main()
+        Dim arr(5) As Integer
+        Dim i, j, f As Integer
+        Dim temp, item As Integer
+
+        Console.WriteLine("Enter array elements")
+        For i = 0 To 5 - 1
+
+            arr(i) = Console.ReadLine()
+        Next
+        Console.WriteLine("Enter item to found")
+        item = Console.ReadLine()
+        For i = 0 To 5 - 1 Step 1
+            If (arr(i) = item) Then
+                f = 0
+                Console.WriteLine("found" & i + 1)
+                Exit For
+            Else
+                f = 1
+            End If
+        Next
+
+        If f = 1 Then
+            Console.Write("not found")
+        End If
+
+
+    End Sub
+
+End Module
